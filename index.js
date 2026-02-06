@@ -18,6 +18,17 @@ const client = new Client({
     ]
 });
 
+// Configuración del webhook (opcional)
+let webhookClient = null;
+if (process.env.DISCORD_WEBHOOK_URL) {
+    try {
+        webhookClient = new WebhookClient({ url: process.env.DISCORD_WEBHOOK_URL });
+        console.log('✅ Webhook configurado correctamente');
+    } catch (error) {
+        console.warn('⚠️ Error configurando webhook:', error.message);
+    }
+}
+
 
 /**
  * Crea un fondo por defecto con gradiente medieval
@@ -312,4 +323,5 @@ client.login(process.env.DISCORD_TOKEN)
         console.error('❌ Error de autenticación:', error.message);
         process.exit(1);
     });
+
 
