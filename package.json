@@ -1,0 +1,27 @@
+{
+  "name": "exile-welcome-bot",
+  "version": "2.0.0",
+  "description": "Bot profesional de bienvenida para Discord con imágenes personalizadas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "canvas": "^2.11.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "keywords": ["discord", "bot", "welcome", "canvas", "images"],
+  "author": "Exile Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macro06/exile-bot.git"
+  }
+}
