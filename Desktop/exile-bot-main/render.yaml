@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: exile-bot
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: WELCOME_CHANNEL_ID
+        sync: false
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
