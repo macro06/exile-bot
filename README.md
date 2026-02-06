@@ -1,0 +1,2 @@
+# exile-bot
+bot discord
